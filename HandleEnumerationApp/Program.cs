@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
+using System.Runtime.CompilerServices;
 
 
 namespace HandleEnumerationApp
@@ -51,8 +53,14 @@ namespace HandleEnumerationApp
 
     public static class EnumerableExtension
     {
-        public static IEnumerable<T> HandleEnumerable<T>(this IEnumerable<T> enumerable, Func<Exception, bool> handleFunc) =>
-            new EnumerableHandler<T>(enumerable, handleFunc);
+        public static IEnumerable<T> HandleEnumerable<T>(this IEnumerable<T> enumerable, Func<Exception, bool> handleFunc)
+        {
+            IEnumerable<CustomAttributeData> attributes = enumerable.GetType().CustomAttributes;
+            if (attributes.Any(x => x.AttributeType == typeof(CompilerGeneratedAttribute)))
+                throw new ArgumentException("Yield return enumeration does not support.", nameof(enumerable));
+
+            return new EnumerableHandler<T>(enumerable, handleFunc);
+        }
     }
 
     public class EnumerableHandler<T> : IEnumerable<T>
