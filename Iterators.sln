@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IteratorsApp", "IteratorsAp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheckArraysPerformanceApp", "CheckArraysPerformanceApp\CheckArraysPerformanceApp.csproj", "{588BA09C-6DE9-45F9-BDC6-62D4216F5858}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HandleEnumerationApp", "HandleEnumerationApp\HandleEnumerationApp.csproj", "{7F79A3B8-8EBC-4300-91B8-F694D6D935FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{588BA09C-6DE9-45F9-BDC6-62D4216F5858}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{588BA09C-6DE9-45F9-BDC6-62D4216F5858}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{588BA09C-6DE9-45F9-BDC6-62D4216F5858}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F79A3B8-8EBC-4300-91B8-F694D6D935FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F79A3B8-8EBC-4300-91B8-F694D6D935FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F79A3B8-8EBC-4300-91B8-F694D6D935FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F79A3B8-8EBC-4300-91B8-F694D6D935FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
